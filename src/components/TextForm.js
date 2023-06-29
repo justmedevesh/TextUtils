@@ -6,18 +6,21 @@ export default function TextForm(props) {
         // console.log("uppercase was clicked" + text);
         let newText= text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to upper case" , "success");
     }
 
     const handelLoClick = () => {
         // console.log("uppercase was clicked" + text);
         let newText= text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to lower case" , "success");
     }
 
     const handelClearClick = () => {
         // console.log("uppercase was clicked" + text);
         let newText= '';
         setText(newText)
+        props.showAlert("Cleared the input box" , "success")
     }
 
     const speak = () => {
@@ -30,11 +33,13 @@ export default function TextForm(props) {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text has been copied in clipboard!" , "success")
     }
     
     const handleExtraSpace = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra space is removed" , "success")
     }
 
     const handelOnChange = (event) => {
