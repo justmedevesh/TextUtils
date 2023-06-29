@@ -16,14 +16,14 @@ export default function About() {
             color:'black',
             backgroundColor:"white"
         })
-        setBtnText('Disable Light mode')
+        setBtnText('Enable Dark mode')
        }
        else{
         setMyStyle({
             color:'white',
             backgroundColor:"black" 
         })
-        setBtnText('Enable Dark Mode')
+        setBtnText('Enable Light Mode')
        }
     }
 
